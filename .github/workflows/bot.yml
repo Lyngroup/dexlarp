@@ -23,7 +23,9 @@ jobs:
       - name: Restore seen tokens
         uses: actions/cache@v4
         with:
-          path: seen.json
+          path: |
+            seen.json
+            paper.json
           key: seen-${{ github.run_id }}
           restore-keys: |
             seen-
